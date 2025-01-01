@@ -1,0 +1,30 @@
+.Header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 2px solid #f3f3f3;
+}
+.Header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px;
+  gap: 10px;
+}
+.Header .wrapper .items {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.Header .wrapper .items .item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 5px;
+  cursor: pointer;
+}
+.Header .wrapper .items .item .icon {
+  font-size: 24px;
+}/*# sourceMappingURL=Style.module.css.map */

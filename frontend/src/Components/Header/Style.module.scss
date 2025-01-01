@@ -1,0 +1,37 @@
+@import '../../StyleHelpers/Variables.scss';
+
+
+.Header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 2px solid $base_color3;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 20px 40px;
+        gap: 10px;
+
+        .items {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .item {
+                display: flex;
+                align-items: center;
+                position: relative;
+                gap: 5px;
+                cursor: pointer;
+
+                .icon {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
