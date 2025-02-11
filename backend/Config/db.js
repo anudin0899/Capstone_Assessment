@@ -1,30 +1,39 @@
-const mysql = require('mysql2/promise.js');
+// const mysql = require('mysql2/promise.js');
+
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+  host: process.env.DB_HOST || 'localhost',
+  user: process.env.DATABASE_USERNAME || 'root',
+  password: process.env.DATABASE_PASSKEY || '',
+  database: process.env.DB_NAME || 'my_database',
+});
+
+module.exports = connection.promise();
 
 
+// const connectToDatabase = () => {
+//   const connection = mysql.createConnection({
+//     host: process.env.DB_HOST || 'localhost',
+//     user: process.env.DATABASE_USERNAME || 'root',
+//     password: process.env.DATABASE_PASSKEY || '',
+//     database: process.env.DB_NAME || 'my_database',
+//   });
+
+//   connection.connect((err) => {
+//     if (err) {
+//       console.error('Error connecting to MySQL:', err.stack);
+//       process.exit(1);
+//     }
+//     console.log('Connected to MySQL database');
+//   });
 
 
-const connectToDatabase = () => {
-  const connection = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DATABASE_USERNAME || 'root',
-    password: process.env.DATABASE_PASSKEY || '',
-    database: process.env.DB_NAME || 'my_database',
-  });
+//   connection.on('error', (err) => {
+//     console.error('MySQL error:', err);
+//   });
 
-  connection.connect((err) => {
-    if (err) {
-      console.error('Error connecting to MySQL:', err.stack);
-      process.exit(1);
-    }
-    console.log('Connected to MySQL database');
-  });
+//   return connection;
+// };
 
-
-  connection.on('error', (err) => {
-    console.error('MySQL error:', err);
-  });
-
-  return connection;
-};
-
-module.exports = connectToDatabase;
+// module.exports = connectToDatabase;

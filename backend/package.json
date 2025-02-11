@@ -4,7 +4,7 @@
   "description": "Assessment",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon  server.js"
+    "start": "nodemon  app.js"
   },
   "keywords": [],
   "author": "Anudinkk",

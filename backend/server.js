@@ -14,7 +14,7 @@ app.use(BodyParser.urlencoded({
 }));
 
 //routes
-const userRoutes = require('./Routes/userRoutes');
+const userRoutes = require('./backend/Routes/userRoutes');
 
 //Enable middleware
 app.use(express.json())
